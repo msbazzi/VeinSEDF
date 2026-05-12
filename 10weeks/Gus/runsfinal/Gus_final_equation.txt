@@ -1,0 +1,32 @@
+FINAL EQUATION FOR Gus - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [42]
+
+Effective Tweak Weights:
+  [cross] I₈D1D2               (idx 42): gate=  2.9395e-03, eff_w_norm=  2.6205e-03, coeff_raw=  9.9241e-03, sigma=  2.6406e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {∅}
+  ΔW_aniso uses ψ_i ∈ {∅}
+  W_cross  uses ψ_i ∈ {I₈D1D2}
+  Combined symbolic terms: {I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

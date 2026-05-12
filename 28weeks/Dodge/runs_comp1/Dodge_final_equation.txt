@@ -1,0 +1,41 @@
+FINAL EQUATION FOR Dodge - DISCOVERED MODEL
+============================================================
+
+Pure Discovery Model:
+  base energy       = none
+  directional model = 4fiber symbolic invariants
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [0, 2, 3, 7, 8, 13, 21, 29, 34, 36, 37, 40]
+
+Effective Tweak Weights:
+  [iso  ] I₁-3                 (idx  0): gate=  2.0057e-01, eff_w_norm=  2.1436e-01, coeff_raw=  1.4159e-02, sigma=  1.5140e+01
+  [iso  ] <E_θ>                (idx  2): gate=  4.4819e-01, eff_w_norm=  3.9801e-01, coeff_raw=  2.5102e+00, sigma=  1.5856e-01
+  [iso  ] <E_z>                (idx  3): gate=  1.0008e-02, eff_w_norm=  8.6803e-03, coeff_raw=  2.6314e-02, sigma=  3.2987e-01
+  [aniso] <I₄D1-1>             (idx  7): gate=  4.2604e-01, eff_w_norm=  4.2509e-01, coeff_raw=  6.4858e-01, sigma=  6.5541e-01
+  [aniso] <I₄D2-1>             (idx  8): gate=  9.0984e-01, eff_w_norm=  9.7771e-01, coeff_raw=  1.4917e+00, sigma=  6.5541e-01
+  [aniso] (<I₄θ-1>)³           (idx 13): gate=  9.8057e-01, eff_w_norm=  1.1215e+00, coeff_raw=  4.1030e+00, sigma=  2.7334e-01
+  [aniso] exp(<I₄θ-1>)-1       (idx 21): gate=  6.4087e-01, eff_w_norm=  4.8481e-01, coeff_raw=  2.6707e-01, sigma=  1.8153e+00
+  [cross] <I₄θ-1>·<E_θ>        (idx 29): gate=  5.2847e-02, eff_w_norm=  4.9916e-02, coeff_raw=  3.4962e-01, sigma=  1.4277e-01
+  [cross] <I₂-3>·<E_θ>         (idx 34): gate=  6.5597e-02, eff_w_norm=  5.7385e-02, coeff_raw=  1.2590e-01, sigma=  4.5579e-01
+  [cross] <I₄D1-1>·<E_θ>       (idx 36): gate=  3.1596e-01, eff_w_norm=  3.2411e-01, coeff_raw=  1.5151e+00, sigma=  2.1391e-01
+  [cross] <I₄D2-1>·<E_θ>       (idx 37): gate=  2.4465e-01, eff_w_norm=  2.2848e-01, coeff_raw=  1.0681e+00, sigma=  2.1391e-01
+  [cross] <I₄θ-1>·<I₄D1-1>     (idx 40): gate=  3.0897e-01, eff_w_norm=  3.1292e-01, coeff_raw=  7.2872e-01, sigma=  4.2940e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_discovered
+
+where:
+  W_discovered = Σ((g_i·w_i) · ψ_i)
+  ψ_i are generated from strain and 4fiber directional invariants
+  ΔW_iso   uses ψ_i ∈ {I₁-3, <E_θ>, <E_z>}
+  ΔW_aniso uses ψ_i ∈ {<I₄D1-1>, <I₄D2-1>, (<I₄θ-1>)³, exp(<I₄θ-1>)-1}
+  W_cross  uses ψ_i ∈ {<I₄θ-1>·<E_θ>, <I₂-3>·<E_θ>, <I₄D1-1>·<E_θ>, <I₄D2-1>·<E_θ>, <I₄θ-1>·<I₄D1-1>}
+  Combined symbolic terms: {I₁-3, <E_θ>, <E_z>, <I₄D1-1>, <I₄D2-1>, (<I₄θ-1>)³, exp(<I₄θ-1>)-1, <I₄θ-1>·<E_θ>, <I₂-3>·<E_θ>, <I₄D1-1>·<E_θ>, <I₄D2-1>·<E_θ>, <I₄θ-1>·<I₄D1-1>}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

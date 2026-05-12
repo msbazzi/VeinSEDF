@@ -1,0 +1,99 @@
+{
+  "animal": "Oreon",
+  "hyperparameters": {
+    "epochs_base": 4000,
+    "epochs_warmup": 7000,
+    "lr_base": 0.05,
+    "lr_resid": 0.001,
+    "wtheta_boost": 4.0,
+    "robust_delta": 1.5,
+    "recruit_start_init": 0.95,
+    "recruit_start_min": 0.9,
+    "recruit_start_max": 1.55,
+    "recruit_end_min": 1.15,
+    "recruit_end_max": 1.8,
+    "gate_thr": 0.001,
+    "seed": 125,
+    "recruit_start_mode": "learn"
+  },
+  "initial_params": {
+    "base.iso._bth": -7.924174125258955,
+    "base.iso._bz": -4.691104641052761,
+    "base.iso.bthz": -2.024068859150328,
+    "base.aniso._\u03b1": 0.3690623316865479,
+    "base.aniso._k1": [
+      2.7385842,
+      2.7385842,
+      -5.67921223,
+      -0.97153299
+    ],
+    "base.aniso._k2": [
+      0.32890311,
+      0.32890311,
+      26.32928802,
+      -3.65178724
+    ],
+    "base.aniso._lam0_raw": [
+      -2.0,
+      -2.0,
+      -2.0,
+      -2.0
+    ],
+    "base.aniso._lam0h_raw": [
+      -2.8,
+      -2.8
+    ],
+    "base.aniso._kappa": [
+      -1.85153429,
+      -1.85153429
+    ],
+    "base.aniso._tau_raw": [
+      -4.85272582,
+      -4.85272582,
+      0.71465403,
+      -1.78704037
+    ],
+    "base.aniso._sigma_s_raw": [
+      -2.0,
+      -2.0,
+      -2.0,
+      -2.0
+    ],
+    "base.aniso._lambda_lb_raw": [
+      -7.6172005,
+      -7.6172005,
+      -5.11719312,
+      -4.52840232
+    ],
+    "base.aniso._lambda_ub_raw": [
+      1.45724963,
+      1.45724963,
+      1.54708951,
+      2.95134481
+    ],
+    "base.aniso._logn_mu_raw": [
+      -3.42550423,
+      -3.42550423,
+      -4.1643924,
+      -3.82612539
+    ],
+    "base.aniso._logn_sig_raw": [
+      -2.4314257,
+      -2.4314257,
+      -10.10110201,
+      0.01047828
+    ],
+    "base.aniso._beta_a_raw": [
+      -0.87183897,
+      -0.87183897,
+      -0.87183897,
+      -0.81093022
+    ],
+    "base.aniso._beta_b_raw": [
+      -0.5798185,
+      -0.47000363,
+      -0.05129329,
+      -1.2039728
+    ]
+  }
+}

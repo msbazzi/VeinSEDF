@@ -1,0 +1,35 @@
+FINAL EQUATION FOR Mojito - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [3, 4, 35, 42]
+
+Effective Tweak Weights:
+  [iso  ] <E_z>                (idx  3): gate=  2.0541e-02, eff_w_norm=  1.9819e-02, coeff_raw=  5.4046e-02, sigma=  3.6670e-01
+  [iso  ] <I₂-3>ln(1+<I₂-3>)   (idx  4): gate=  9.9996e-01, eff_w_norm=  3.3218e+00, coeff_raw=  2.0269e-02, sigma=  1.6389e+02
+  [cross] <I₂-3>·<E_z>         (idx 35): gate=  2.2489e-01, eff_w_norm=  2.9799e-01, coeff_raw=  1.2526e-02, sigma=  2.3789e+01
+  [cross] I₈D1D2               (idx 42): gate=  2.6065e-01, eff_w_norm=  3.5645e-01, coeff_raw=  5.3502e-01, sigma=  6.6624e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {<E_z>, <I₂-3>ln(1+<I₂-3>)}
+  ΔW_aniso uses ψ_i ∈ {∅}
+  W_cross  uses ψ_i ∈ {<I₂-3>·<E_z>, I₈D1D2}
+  Combined symbolic terms: {<E_z>, <I₂-3>ln(1+<I₂-3>), <I₂-3>·<E_z>, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

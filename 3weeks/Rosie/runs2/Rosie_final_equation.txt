@@ -1,0 +1,43 @@
+FINAL EQUATION FOR Rosie - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [1, 2, 3, 4, 13, 14, 15, 16, 32, 34, 35, 42]
+
+Effective Tweak Weights:
+  [iso  ] I₂-3                 (idx  1): gate=  3.2446e-04, eff_w_norm=  2.0076e-04, coeff_raw=  2.1674e-03, sigma=  9.2628e-02
+  [iso  ] <E_θ>                (idx  2): gate=  3.8984e-04, eff_w_norm=  2.4465e-04, coeff_raw=  3.0245e-03, sigma=  8.0889e-02
+  [iso  ] <E_z>                (idx  3): gate=  3.5524e-04, eff_w_norm=  2.2088e-04, coeff_raw=  4.5381e-03, sigma=  4.8671e-02
+  [iso  ] <I₂-3>ln(1+<I₂-3>)   (idx  4): gate=  4.3336e-04, eff_w_norm=  2.7304e-04, coeff_raw=  8.6809e-03, sigma=  3.1453e-02
+  [aniso] (<I₄θ-1>)³           (idx 13): gate=  4.1300e-04, eff_w_norm=  2.6032e-04, coeff_raw=  7.4496e-03, sigma=  3.4945e-02
+  [aniso] (<I₄z-1>)³           (idx 14): gate=  4.4078e-04, eff_w_norm=  2.7772e-04, coeff_raw=  1.9641e-02, sigma=  1.4140e-02
+  [aniso] (<I₄D1-1>)³          (idx 15): gate=  4.3755e-04, eff_w_norm=  2.7560e-04, coeff_raw=  2.0206e-02, sigma=  1.3640e-02
+  [aniso] (<I₄D2-1>)³          (idx 16): gate=  4.3754e-04, eff_w_norm=  2.7561e-04, coeff_raw=  2.0206e-02, sigma=  1.3640e-02
+  [cross] <I₁-3>·<E_θ>         (idx 32): gate=  4.1337e-04, eff_w_norm=  2.5995e-04, coeff_raw=  1.3256e-02, sigma=  1.9610e-02
+  [cross] <I₂-3>·<E_θ>         (idx 34): gate=  4.3849e-04, eff_w_norm=  2.7664e-04, coeff_raw=  1.1648e-02, sigma=  2.3749e-02
+  [cross] <I₂-3>·<E_z>         (idx 35): gate=  4.2292e-04, eff_w_norm=  2.6590e-04, coeff_raw=  1.7320e-02, sigma=  1.5352e-02
+  [cross] I₈D1D2               (idx 42): gate=  3.5286e-03, eff_w_norm=  2.8325e-03, coeff_raw=  2.9423e-02, sigma=  9.6267e-02
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {I₂-3, <E_θ>, <E_z>, <I₂-3>ln(1+<I₂-3>)}
+  ΔW_aniso uses ψ_i ∈ {(<I₄θ-1>)³, (<I₄z-1>)³, (<I₄D1-1>)³, (<I₄D2-1>)³}
+  W_cross  uses ψ_i ∈ {<I₁-3>·<E_θ>, <I₂-3>·<E_θ>, <I₂-3>·<E_z>, I₈D1D2}
+  Combined symbolic terms: {I₂-3, <E_θ>, <E_z>, <I₂-3>ln(1+<I₂-3>), (<I₄θ-1>)³, (<I₄z-1>)³, (<I₄D1-1>)³, (<I₄D2-1>)³, <I₁-3>·<E_θ>, <I₂-3>·<E_θ>, <I₂-3>·<E_z>, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

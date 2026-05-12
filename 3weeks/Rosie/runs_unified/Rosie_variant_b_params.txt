@@ -1,0 +1,31 @@
+Base parameters — Variant B — Age Rosie
+  b: Quad+4Fib (no rec, no disp)
+========================================================================
+
+Model: DecomposedSEDFBase  (no symbolic cross terms)
+  isotropic   : poly
+  anisotropic : 4fiber  (recruit=False, disp=False)
+
+State dict (gradient-trained):
+------------------------------------------------------------------------
+  iso._bth: -4.196943047
+  iso._bz: -0.386380836
+  iso.bthz: 3.051943359
+  aniso._α: 2.992332103
+  aniso._k1: [ 2.20229377,  2.20229377,  3.49718514, 10.23748542]
+  aniso._k2: [3.67188968, 3.67188968, 5.07179274, 6.45521181]
+  aniso._lam0_raw: [-4.39504029, -4.39504029, -7.75551569, -0.50951145]
+  aniso._lam0h_raw: [-2.8, -2.8]
+  aniso._tau_raw: [ 5.20637112,  5.20637112,  8.38579451, -7.86209982]
+  aniso._sigma_s_raw: [-2., -2., -2., -2.]
+  aniso._lambda_lb_raw: [-4., -4., -4., -4.]
+  aniso._lambda_ub_raw: [1., 1., 1., 1.]
+  aniso._logn_mu_raw: [-2.2, -2.2, -2.2, -2.2]
+  aniso._logn_sig_raw: [-2., -2., -2., -2.]
+  aniso._beta_a_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._beta_b_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._recruit_ref_stretch: 1.156481481
+  aniso.quad_x: [0.005299, 0.027712, 0.067184, 0.122299, 0.191061, 0.270991, 0.359009,
+ 0.451846, 0.546156, 0.638756, 0.726781, 0.807785]
+  aniso.quad_w: [0.013576, 0.031126, 0.047579, 0.062314, 0.074797, 0.084578, 0.091322,
+ 0.094827, 0.095038, 0.092045, 0.086079, 0.0775  ]

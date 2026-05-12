@@ -1,0 +1,31 @@
+Base parameters — Variant B — Age Mercedes
+  b: Quad+4Fib (no rec, no disp)
+========================================================================
+
+Model: DecomposedSEDFBase  (no symbolic cross terms)
+  isotropic   : poly
+  anisotropic : 4fiber  (recruit=False, disp=False)
+
+State dict (gradient-trained):
+------------------------------------------------------------------------
+  iso._bth: -4.399770285
+  iso._bz: -4.021262633
+  iso.bthz: 4.410717762
+  aniso._α: 0.3472517745
+  aniso._k1: [6.15199086, 6.15199086, 4.05772199, 3.55503914]
+  aniso._k2: [-5.57371779, -5.57371779, 31.11506564, -4.34399947]
+  aniso._lam0_raw: [-7.22747887, -7.22747887, -7.85224445,  2.52153846]
+  aniso._lam0h_raw: [-2.8, -2.8]
+  aniso._tau_raw: [ 8.7111155 ,  8.7111155 ,  0.98990694, -2.94636476]
+  aniso._sigma_s_raw: [-2., -2., -2., -2.]
+  aniso._lambda_lb_raw: [-4., -4., -4., -4.]
+  aniso._lambda_ub_raw: [1., 1., 1., 1.]
+  aniso._logn_mu_raw: [-2.2, -2.2, -2.2, -2.2]
+  aniso._logn_sig_raw: [-2., -2., -2., -2.]
+  aniso._beta_a_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._beta_b_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._recruit_ref_stretch: 1.418008008
+  aniso.quad_x: [0.005299, 0.027712, 0.067184, 0.122299, 0.191061, 0.270991, 0.359009,
+ 0.451846, 0.546156, 0.638756, 0.726781, 0.807785]
+  aniso.quad_w: [0.013576, 0.031126, 0.047579, 0.062314, 0.074797, 0.084578, 0.091322,
+ 0.094827, 0.095038, 0.092045, 0.086079, 0.0775  ]

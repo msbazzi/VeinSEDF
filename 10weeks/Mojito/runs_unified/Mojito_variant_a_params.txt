@@ -1,0 +1,29 @@
+Base parameters — Variant A — Age Mojito
+  a: NeoHookean+4Fib (no rec, no disp)
+========================================================================
+
+Model: DecomposedSEDFBase  (no symbolic cross terms)
+  isotropic   : neohookean
+  anisotropic : 4fiber  (recruit=False, disp=False)
+
+State dict (gradient-trained):
+------------------------------------------------------------------------
+  iso._mu: -6.369527352
+  aniso._α: 1.481514743
+  aniso._k1: [0.62938379, 0.62938379, 1.80170302, 0.65305359]
+  aniso._k2: [-1.37194366, -1.37194366, -0.93468027, -2.24112528]
+  aniso._lam0_raw: [-4.00518366, -4.00518366, -6.60711068, -3.80827294]
+  aniso._lam0h_raw: [-2.8, -2.8]
+  aniso._tau_raw: [-0.3287655 , -0.3287655 , -2.80598304, -1.18127457]
+  aniso._sigma_s_raw: [-2., -2., -2., -2.]
+  aniso._lambda_lb_raw: [-4., -4., -4., -4.]
+  aniso._lambda_ub_raw: [1., 1., 1., 1.]
+  aniso._logn_mu_raw: [-2.2, -2.2, -2.2, -2.2]
+  aniso._logn_sig_raw: [-2., -2., -2., -2.]
+  aniso._beta_a_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._beta_b_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._recruit_ref_stretch: 1.56013013
+  aniso.quad_x: [0.005299, 0.027712, 0.067184, 0.122299, 0.191061, 0.270991, 0.359009,
+ 0.451846, 0.546156, 0.638756, 0.726781, 0.807785]
+  aniso.quad_w: [0.013576, 0.031126, 0.047579, 0.062314, 0.074797, 0.084578, 0.091322,
+ 0.094827, 0.095038, 0.092045, 0.086079, 0.0775  ]

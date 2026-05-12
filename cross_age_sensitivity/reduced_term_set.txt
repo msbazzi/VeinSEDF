@@ -1,0 +1,26 @@
+Sobol-ranked reduced SEDF term set (descending by total ST)
+======================================================================
+
+Specimens analyzed       : 12
+Unique terms in pool     : 20
+Kinematic grid           : 20x20, lam in [1.0,1.5]
+Saltelli base samples N  : 1024
+
+Bound: w_i in [-1, 1] on z-scored psi (normalized basis space).
+
+Top-10 by total Sobol index ST (suggested 5-10 term set):
+
+   1. <I₄z-1>·<I₄D2-1>                ST=0.136 (+/- 0.016), S1=0.011, obs_max|eff_w_norm|=0.000258
+   2. <I₁-3>·<E_z>                    ST=0.134 (+/- 0.014), S1=-0.013, obs_max|eff_w_norm|=0.0161
+   3. <I₄D2-1>                        ST=0.129 (+/- 0.014), S1=0.033, obs_max|eff_w_norm|=0.261
+   4. <I₄z-1>·<E_z>                   ST=0.129 (+/- 0.013), S1=-0.004, obs_max|eff_w_norm|=0.00118
+   5. exp(<I₄z-1>)-1                  ST=0.128 (+/- 0.015), S1=-0.031, obs_max|eff_w_norm|=0.0987
+   6. (<I₄D1-1>)³                     ST=0.126 (+/- 0.016), S1=-0.010, obs_max|eff_w_norm|=0.000265
+   7. <I₄z-1>                         ST=0.126 (+/- 0.016), S1=0.012, obs_max|eff_w_norm|=0.321
+   8. <I₄D1-1>                        ST=0.126 (+/- 0.015), S1=-0.026, obs_max|eff_w_norm|=0.285
+   9. (<I₄D2-1>)³                     ST=0.125 (+/- 0.016), S1=-0.011, obs_max|eff_w_norm|=0.00568
+  10. (<I₄z-1>)³                      ST=0.125 (+/- 0.015), S1=0.025, obs_max|eff_w_norm|=0.000289
+
+Suggested 5-term set: <I₄z-1>·<I₄D2-1>, <I₁-3>·<E_z>, <I₄D2-1>, <I₄z-1>·<E_z>, exp(<I₄z-1>)-1
+Suggested 8-term set: <I₄z-1>·<I₄D2-1>, <I₁-3>·<E_z>, <I₄D2-1>, <I₄z-1>·<E_z>, exp(<I₄z-1>)-1, (<I₄D1-1>)³, <I₄z-1>, <I₄D1-1>
+Suggested 10-term set: <I₄z-1>·<I₄D2-1>, <I₁-3>·<E_z>, <I₄D2-1>, <I₄z-1>·<E_z>, exp(<I₄z-1>)-1, (<I₄D1-1>)³, <I₄z-1>, <I₄D1-1>, (<I₄D2-1>)³, (<I₄z-1>)³

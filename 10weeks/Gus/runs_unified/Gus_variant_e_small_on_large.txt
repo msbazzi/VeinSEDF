@@ -1,0 +1,56 @@
+Small-on-large linearised stiffness — variant_e — Age Gus
+Reference: Baek, Gleason, Rajagopal, Humphrey (2007)
+========================================================================
+
+In-vivo configuration (assumed equilibrium):
+  λ_θ_iv     : 1.880647
+  λ_z_iv     : 1.465309
+  F = diag   : [0.36288  1.880647 1.465309]
+  σ_θ_total  : 4.038122e+00 kPa
+  σ_z_total  : 1.333288e+01 kPa
+  Lagrange p : 5.598676e-03 kPa
+
+Extra Cauchy stress t_extra_AA (no Lagrange p) [kPa]:
+  t_extra_rr : 5.598676e-03
+  t_extra_θθ : 4.043721e+00
+  t_extra_zz : 1.333848e+01
+
+Lagrangian material stiffness K_AABB (kPa)  ordering (r, θ, z):
+  K_rrrr   : +6.208528e-03
+  K_rrθθ   : +8.366956e-03
+  K_rrzz   : +2.421058e-01
+  K_θθrr   : +8.366956e-03
+  K_θθθθ   : +3.844901e+00
+  K_θθzz   : +7.866921e+00
+  K_zzrr   : +2.421058e-01
+  K_zzθθ   : +7.866921e+00
+  K_zzzz   : +1.913425e+01
+
+Spatial elasticity tensor C diagonal block (kPa)  ordering (r, θ, z):
+  C_rrrrrrrr: +1.130501e-02
+  C_rrθθrrθθ: +3.896808e-03
+  C_rrzzrrzz: +6.845274e-02
+  C_θθrrθθrr: +3.896808e-03
+  C_θθθθθθθθ: +5.618399e+01
+  C_θθzzθθzz: +5.974171e+01
+  C_zzrrzzrr: +6.845274e-02
+  C_zzθθzzθθ: +5.974171e+01
+  C_zzzzzzzz: +1.148891e+02
+
+Shear stiffness pre-stress contribution only (kPa):
+  C_θzθz   : +1.333848e+01
+  C_rθrθ   : +4.043721e+00
+  C_rzrz   : +1.333848e+01
+
+Computational K_FSG (5×5, MPa)  rows/cols = [θ, z, θz, rθ, rz]:
+[[0.0562 0.0597 0.     0.     0.    ]
+ [0.0597 0.1149 0.     0.     0.    ]
+ [0.     0.     0.0133 0.     0.    ]
+ [0.     0.     0.     0.004  0.    ]
+ [0.     0.     0.     0.     0.0133]]
+
+C_out summary (MPa) [Cθθθθ, Czzzz, Cθθzz, Cθzθz_pre]:
+  [0.056184, 0.114889, 0.059742, 0.013338]
+
+Notes:
+  Diagonal block (Cθθθθ, Czzzz, Cθθzz, Czzθθ) is computed from the λ-Hessian of W via principal-axis chain rule; values are exact for the model. C_θzθz / C_rθrθ / C_rzrz include the Baek pre-stress term only — material K_θzθz etc. needs off-diagonal C perturbation, which the energy(lam) API does not currently expose.

@@ -1,0 +1,38 @@
+FINAL EQUATION FOR Dodge - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [1, 3, 4, 6, 16, 22, 42]
+
+Effective Tweak Weights:
+  [iso  ] I₂-3                 (idx  1): gate=  7.2261e-01, eff_w_norm=  1.4206e+00, coeff_raw=  4.2999e-02, sigma=  3.3038e+01
+  [iso  ] <E_z>                (idx  3): gate=  4.0108e-01, eff_w_norm=  4.5554e-01, coeff_raw=  1.3809e+00, sigma=  3.2987e-01
+  [iso  ] <I₂-3>ln(1+<I₂-3>)   (idx  4): gate=  9.7277e-01, eff_w_norm=  1.6778e+01, coeff_raw=  1.0992e-01, sigma=  1.5265e+02
+  [aniso] <I₄z-1>              (idx  6): gate=  4.2532e-01, eff_w_norm=  4.3569e-01, coeff_raw=  6.5940e-01, sigma=  6.6073e-01
+  [aniso] (<I₄D2-1>)³          (idx 16): gate=  3.2503e-01, eff_w_norm=  3.4734e-01, coeff_raw=  1.1032e+00, sigma=  3.1485e-01
+  [aniso] exp(<I₄z-1>)-1       (idx 22): gate=  3.6157e-01, eff_w_norm=  3.7401e-01, coeff_raw=  4.2413e-02, sigma=  8.8182e+00
+  [cross] I₈D1D2               (idx 42): gate=  8.0560e-01, eff_w_norm=  1.9516e+00, coeff_raw=  3.5697e+00, sigma=  5.4671e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {I₂-3, <E_z>, <I₂-3>ln(1+<I₂-3>)}
+  ΔW_aniso uses ψ_i ∈ {<I₄z-1>, (<I₄D2-1>)³, exp(<I₄z-1>)-1}
+  W_cross  uses ψ_i ∈ {I₈D1D2}
+  Combined symbolic terms: {I₂-3, <E_z>, <I₂-3>ln(1+<I₂-3>), <I₄z-1>, (<I₄D2-1>)³, exp(<I₄z-1>)-1, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

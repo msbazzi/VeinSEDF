@@ -1,0 +1,38 @@
+FINAL EQUATION FOR Audi - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [14, 21, 23, 24, 34, 35, 42]
+
+Effective Tweak Weights:
+  [aniso] (<I₄z-1>)³           (idx 14): gate=  6.7221e-05, eff_w_norm=  3.6314e-05, coeff_raw=  9.8157e-05, sigma=  3.6996e-01
+  [aniso] exp(<I₄θ-1>)-1       (idx 21): gate=  4.1351e-04, eff_w_norm=  4.2546e-04, coeff_raw=  3.1341e-05, sigma=  1.3575e+01
+  [aniso] exp(<I₄D1-1>)-1      (idx 23): gate=  3.9719e-04, eff_w_norm=  4.3237e-04, coeff_raw=  3.2725e-05, sigma=  1.3212e+01
+  [aniso] exp(<I₄D2-1>)-1      (idx 24): gate=  3.6282e-03, eff_w_norm=  4.6960e-03, coeff_raw=  3.5543e-04, sigma=  1.3212e+01
+  [cross] <I₂-3>·<E_θ>         (idx 34): gate=  4.4771e-02, eff_w_norm=  6.1439e-02, coeff_raw=  1.0949e-01, sigma=  5.6116e-01
+  [cross] <I₂-3>·<E_z>         (idx 35): gate=  2.3640e-02, eff_w_norm=  2.7563e-02, coeff_raw=  9.8300e-02, sigma=  2.8039e-01
+  [cross] I₈D1D2               (idx 42): gate=  7.7845e-01, eff_w_norm=  1.9234e+00, coeff_raw=  2.2869e+00, sigma=  8.4103e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {∅}
+  ΔW_aniso uses ψ_i ∈ {(<I₄z-1>)³, exp(<I₄θ-1>)-1, exp(<I₄D1-1>)-1, exp(<I₄D2-1>)-1}
+  W_cross  uses ψ_i ∈ {<I₂-3>·<E_θ>, <I₂-3>·<E_z>, I₈D1D2}
+  Combined symbolic terms: {(<I₄z-1>)³, exp(<I₄θ-1>)-1, exp(<I₄D1-1>)-1, exp(<I₄D2-1>)-1, <I₂-3>·<E_θ>, <I₂-3>·<E_z>, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

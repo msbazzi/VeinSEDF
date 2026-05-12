@@ -1,0 +1,2 @@
+model,r2_circumferential,r2_axial,mse_circumferential,mse_axial,loss,aic,bic
+h: VeinDiscovered (Quad+4Fib+rec+disp+cross),0.670753549538824,0.8033905064982085,9.698598000723804,6.352849264658936,14.282094115936909,7565.172499773405,7874.02729332785

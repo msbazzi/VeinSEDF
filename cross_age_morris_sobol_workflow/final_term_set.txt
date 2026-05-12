@@ -1,0 +1,50 @@
+Final reduced term set from Morris screening + Sobol ranking
+========================================================================
+
+Specimens analyzed        : 12
+Base mode                 : none
+Candidate filter          : n_specimens >= 1
+Morris bound mode         : coeff_max
+Sobol bound mode          : coeff_max
+Final top_k               : 10
+Grid                      : 20x20, lam_theta [0.6, 1.6], lam_z [1.0, 1.6]
+
+Final terms, in Morris order:
+   1. (<I₄θ-1>)³    Sobol ST=1.0114, S1=0.9950
+   2. I₈D1D2    Sobol ST=0.0116, S1=-0.0023
+   3. <I₄D2-1>    Sobol ST=0.0003, S1=-0.0023
+   4. <E_θ>    Sobol ST=0.0002, S1=-0.0001
+   5. <I₄D1-1>    Sobol ST=0.0004, S1=-0.0004
+   6. <I₄z-1>    Sobol ST=0.0003, S1=-0.0004
+   7. <E_z>    Sobol ST=0.0002, S1=-0.0001
+   8. <I₄θ-1>    Sobol ST=0.0001, S1=-0.0000
+   9. I₂-3    Sobol ST=0.0000, S1=-0.0002
+  10. <I₂-3>ln(1+<I₂-3>)    Sobol ST=0.0000, S1=0.0000
+
+Top Morris screening terms:
+   1. (<I₄θ-1>)³    mu_star=38.7, sigma=48.49, n=2
+   2. I₈D1D2    mu_star=4.708, sigma=4.912, n=12
+   3. <I₄D2-1>    mu_star=0.7659, sigma=0.8172, n=4
+   4. <E_θ>    mu_star=0.7211, sigma=0.7273, n=4
+   5. <I₄D1-1>    mu_star=0.7093, sigma=0.7925, n=4
+   6. <I₄z-1>    mu_star=0.7007, sigma=0.7463, n=5
+   7. <E_z>    mu_star=0.5315, sigma=0.5803, n=7
+   8. <I₄θ-1>    mu_star=0.3264, sigma=0.3239, n=2
+   9. I₂-3    mu_star=0.2608, sigma=0.2682, n=4
+  10. <I₂-3>ln(1+<I₂-3>)    mu_star=0.147, sigma=0.1509, n=3
+
+Sobol ranking within final set:
+   1. (<I₄θ-1>)³    ST=1.0114 (+/- 0.0563), S1=0.9950 (+/- 0.0666)
+   2. I₈D1D2    ST=0.0116 (+/- 0.0009), S1=-0.0023 (+/- 0.0100)
+   3. <I₄D1-1>    ST=0.0004 (+/- 0.0000), S1=-0.0004 (+/- 0.0018)
+   4. <I₄D2-1>    ST=0.0003 (+/- 0.0000), S1=-0.0023 (+/- 0.0016)
+   5. <I₄z-1>    ST=0.0003 (+/- 0.0000), S1=-0.0004 (+/- 0.0015)
+   6. <E_θ>    ST=0.0002 (+/- 0.0000), S1=-0.0001 (+/- 0.0014)
+   7. <E_z>    ST=0.0002 (+/- 0.0000), S1=-0.0001 (+/- 0.0015)
+   8. <I₄θ-1>    ST=0.0001 (+/- 0.0000), S1=-0.0000 (+/- 0.0005)
+   9. I₂-3    ST=0.0000 (+/- 0.0000), S1=-0.0002 (+/- 0.0005)
+  10. <I₂-3>ln(1+<I₂-3>)    ST=0.0000 (+/- 0.0000), S1=0.0000 (+/- 0.0003)
+
+Robustness checks:
+  Delta top terms: (<I₄θ-1>)³, <I₄D2-1>, <I₂-3>ln(1+<I₂-3>), <I₄θ-1>, <I₄D1-1>
+  PAWN top terms : (<I₄θ-1>)³, I₈D1D2, <I₄z-1>, <I₄θ-1>, <I₂-3>ln(1+<I₂-3>)

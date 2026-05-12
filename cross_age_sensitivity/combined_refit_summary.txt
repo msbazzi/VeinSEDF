@@ -1,0 +1,7 @@
+CombinedEquationSEDF refit summary (mode=raw_uniform, base epochs=2000, tweak epochs=1000)
+==============================================================================
+
+ k  n_animals  mean_rmse_theta  median_rmse_theta  mean_rmse_z  median_rmse_z  mean_rmse_combined  median_rmse_combined
+ 5         11         3.200623           2.803335     1.555646       1.434962            2.558282              2.462666
+ 8         11         3.188344           2.800284     1.545668       1.546785            2.548961              2.409906
+10         11         3.190514           2.799209     1.548655       1.559246            2.551314              2.401975

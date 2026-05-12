@@ -1,0 +1,56 @@
+Small-on-large linearised stiffness — variant_f — Age Dodge
+Reference: Baek, Gleason, Rajagopal, Humphrey (2007)
+========================================================================
+
+In-vivo configuration (assumed equilibrium):
+  λ_θ_iv     : 0.923543
+  λ_z_iv     : 1.535645
+  F = diag   : [0.705102 0.923543 1.535645]
+  σ_θ_total  : 2.003681e+00 kPa
+  σ_z_total  : 1.191579e+01 kPa
+  Lagrange p : 1.588161e-02 kPa
+
+Extra Cauchy stress t_extra_AA (no Lagrange p) [kPa]:
+  t_extra_rr : 1.588161e-02
+  t_extra_θθ : 2.019563e+00
+  t_extra_zz : 1.193167e+01
+
+Lagrangian material stiffness K_AABB (kPa)  ordering (r, θ, z):
+  K_rrrr   : +4.608635e-03
+  K_rrθθ   : +5.020408e-02
+  K_rrzz   : -5.992700e-01
+  K_θθrr   : +5.020408e-02
+  K_θθθθ   : +1.035272e+00
+  K_θθzz   : -8.880727e+00
+  K_zzrr   : -5.992700e-01
+  K_zzθθ   : -8.880727e+00
+  K_zzzz   : +6.709355e+01
+
+Spatial elasticity tensor C diagonal block (kPa)  ordering (r, θ, z):
+  C_rrrrrrrr: +3.290237e-02
+  C_rrθθrrθθ: +2.128910e-02
+  C_rrzzrrzz: -7.025996e-01
+  C_θθrrθθrr: +2.128910e-02
+  C_θθθθθθθθ: +4.792279e+00
+  C_θθzzθθzz: -1.786261e+01
+  C_zzrrzzrr: -7.025996e-01
+  C_zzθθzzθθ: -1.786261e+01
+  C_zzzzzzzz: +3.969797e+02
+
+Shear stiffness pre-stress contribution only (kPa):
+  C_θzθz   : +1.193167e+01
+  C_rθrθ   : +2.019563e+00
+  C_rzrz   : +1.193167e+01
+
+Computational K_FSG (5×5, MPa)  rows/cols = [θ, z, θz, rθ, rz]:
+[[ 0.0048 -0.0179  0.      0.      0.    ]
+ [-0.0179  0.397   0.      0.      0.    ]
+ [ 0.      0.      0.0119  0.      0.    ]
+ [ 0.      0.      0.      0.002   0.    ]
+ [ 0.      0.      0.      0.      0.0119]]
+
+C_out summary (MPa) [Cθθθθ, Czzzz, Cθθzz, Cθzθz_pre]:
+  [0.004792, 0.396980, -0.017863, 0.011932]
+
+Notes:
+  Diagonal block (Cθθθθ, Czzzz, Cθθzz, Czzθθ) is computed from the λ-Hessian of W via principal-axis chain rule; values are exact for the model. C_θzθz / C_rθrθ / C_rzrz include the Baek pre-stress term only — material K_θzθz etc. needs off-diagonal C perturbation, which the energy(lam) API does not currently expose.

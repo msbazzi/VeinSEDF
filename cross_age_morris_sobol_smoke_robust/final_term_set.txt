@@ -1,0 +1,40 @@
+Final reduced term set from Morris screening + Sobol ranking
+========================================================================
+
+Specimens analyzed        : 12
+Base mode                 : none
+Candidate filter          : n_specimens >= 1
+Morris bound mode         : coeff_max
+Sobol bound mode          : coeff_max
+Final top_k               : 5
+Grid                      : 6x6, lam_theta [0.6, 1.6], lam_z [1.0, 1.6]
+
+Final terms, in Morris order:
+   1. (<I₄θ-1>)³    Sobol ST=1.0018, S1=1.0150
+   2. I₈D1D2    Sobol ST=0.0071, S1=0.0065
+   3. <E_θ>    Sobol ST=0.0002, S1=0.0009
+   4. <I₄D1-1>    Sobol ST=0.0003, S1=-0.0017
+   5. <I₄z-1>    Sobol ST=0.0002, S1=0.0001
+
+Top Morris screening terms:
+   1. (<I₄θ-1>)³    mu_star=85.34, sigma=84.58, n=2
+   2. I₈D1D2    mu_star=4.306, sigma=5.137, n=12
+   3. <E_θ>    mu_star=0.802, sigma=0.9273, n=4
+   4. <I₄D1-1>    mu_star=0.6726, sigma=0.7523, n=4
+   5. <I₄z-1>    mu_star=0.6618, sigma=0.7041, n=5
+   6. <I₄D2-1>    mu_star=0.5012, sigma=0.651, n=4
+   7. <E_z>    mu_star=0.4244, sigma=0.5459, n=7
+   8. <I₄θ-1>    mu_star=0.3713, sigma=0.4296, n=2
+   9. I₂-3    mu_star=0.2925, sigma=0.04675, n=4
+  10. <I₂-3>ln(1+<I₂-3>)    mu_star=0.1848, sigma=0.1913, n=3
+
+Sobol ranking within final set:
+   1. (<I₄θ-1>)³    ST=1.0018 (+/- 0.2258), S1=1.0150 (+/- 0.2637)
+   2. I₈D1D2    ST=0.0071 (+/- 0.0025), S1=0.0065 (+/- 0.0317)
+   3. <I₄D1-1>    ST=0.0003 (+/- 0.0001), S1=-0.0017 (+/- 0.0064)
+   4. <I₄z-1>    ST=0.0002 (+/- 0.0001), S1=0.0001 (+/- 0.0044)
+   5. <E_θ>    ST=0.0002 (+/- 0.0001), S1=0.0009 (+/- 0.0043)
+
+Robustness checks:
+  Delta top terms: (<I₄θ-1>)³, <I₄z-1>, I₈D1D2, <I₄D1-1>, <E_θ>
+  PAWN top terms : (<I₄θ-1>)³, <I₄z-1>, <E_θ>, I₈D1D2, <I₄D1-1>

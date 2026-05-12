@@ -1,0 +1,40 @@
+FINAL EQUATION FOR lexus - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [0, 1, 2, 5, 7, 8, 17, 19, 21]
+
+Effective Tweak Weights:
+  [iso  ] I₁-3                 (idx  0): gate=  2.8067e-02, eff_w_norm=  2.1827e-02, coeff_raw=  2.3907e-02, sigma=  9.1301e-01
+  [iso  ] I₂-3                 (idx  1): gate=  2.3360e-01, eff_w_norm=  2.3092e-01, coeff_raw=  1.3969e-01, sigma=  1.6531e+00
+  [iso  ] <E_θ>                (idx  2): gate=  6.8302e-01, eff_w_norm=  3.9250e-01, coeff_raw=  7.4104e-01, sigma=  5.2966e-01
+  [aniso] <I₄θ-1>              (idx  5): gate=  1.6090e-01, eff_w_norm=  1.4481e-01, coeff_raw=  1.3668e-01, sigma=  1.0595e+00
+  [aniso] <I₄D1-1>             (idx  7): gate=  4.2051e-01, eff_w_norm=  4.6403e-01, coeff_raw=  1.3744e+00, sigma=  3.3763e-01
+  [aniso] <I₄D2-1>             (idx  8): gate=  1.0602e-01, eff_w_norm=  9.6015e-02, coeff_raw=  2.8438e-01, sigma=  3.3763e-01
+  [cross] <E_θ>·<E_z>          (idx 17): gate=  3.2677e-01, eff_w_norm=  3.1573e-01, coeff_raw=  1.4686e+00, sigma=  2.1499e-01
+  [cross] <I₁-3>·<E_z>         (idx 19): gate=  4.9272e-02, eff_w_norm=  4.4024e-02, coeff_raw=  1.1252e-01, sigma=  3.9126e-01
+  [cross] <I₂-3>·<E_z>         (idx 21): gate=  7.9083e-02, eff_w_norm=  7.4683e-02, coeff_raw=  1.0312e-01, sigma=  7.2424e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {I₁-3, I₂-3, <E_θ>}
+  ΔW_aniso uses ψ_i ∈ {<I₄θ-1>, <I₄D1-1>, <I₄D2-1>}
+  W_cross  uses ψ_i ∈ {<E_θ>·<E_z>, <I₁-3>·<E_z>, <I₂-3>·<E_z>}
+  Combined symbolic terms: {I₁-3, I₂-3, <E_θ>, <I₄θ-1>, <I₄D1-1>, <I₄D2-1>, <E_θ>·<E_z>, <I₁-3>·<E_z>, <I₂-3>·<E_z>}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

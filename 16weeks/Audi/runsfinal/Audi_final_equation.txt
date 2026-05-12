@@ -1,0 +1,37 @@
+FINAL EQUATION FOR Audi - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [2, 3, 6, 7, 8, 42]
+
+Effective Tweak Weights:
+  [iso  ] <E_θ>                (idx  2): gate=  5.0922e-02, eff_w_norm=  5.4251e-02, coeff_raw=  1.5159e-01, sigma=  3.5789e-01
+  [iso  ] <E_z>                (idx  3): gate=  4.8506e-02, eff_w_norm=  3.5581e-02, coeff_raw=  2.1241e-01, sigma=  1.6751e-01
+  [aniso] <I₄z-1>              (idx  6): gate=  9.3170e-02, eff_w_norm=  7.2158e-02, coeff_raw=  2.1481e-01, sigma=  3.3592e-01
+  [aniso] <I₄D1-1>             (idx  7): gate=  4.8575e-02, eff_w_norm=  5.1419e-02, coeff_raw=  7.2356e-02, sigma=  7.1064e-01
+  [aniso] <I₄D2-1>             (idx  8): gate=  4.2618e-02, eff_w_norm=  4.4839e-02, coeff_raw=  6.3097e-02, sigma=  7.1064e-01
+  [cross] I₈D1D2               (idx 42): gate=  8.7290e-01, eff_w_norm=  1.6013e+00, coeff_raw=  1.9043e+00, sigma=  8.4085e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {<E_θ>, <E_z>}
+  ΔW_aniso uses ψ_i ∈ {<I₄z-1>, <I₄D1-1>, <I₄D2-1>}
+  W_cross  uses ψ_i ∈ {I₈D1D2}
+  Combined symbolic terms: {<E_θ>, <E_z>, <I₄z-1>, <I₄D1-1>, <I₄D2-1>, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

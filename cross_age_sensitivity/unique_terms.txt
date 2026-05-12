@@ -1,0 +1,59 @@
+Unique SEDF terms selected across the 12 juvenile specimens
+============================================================
+Source: runsfinal/*_final_equation.txt across 5 ages (3, 8, 10, 16, 28 weeks).
+Sorted by number of specimens that selected the term (descending).
+
+#   bucket  n_spec  term                       ages selected in
+--  ------  ------  -------------------------  --------------------------------
+ 1  cross     12    I₈D1D2                     3w, 8w, 10w, 16w, 28w
+ 2  iso        7    <E_z>                      3w, 8w, 10w, 16w, 28w
+ 3  aniso      5    <I₄z-1>                    3w, 8w, 10w, 16w
+ 4  iso        4    I₂-3                       3w, 10w, 28w
+ 5  aniso      4    <I₄D1-1>                   16w, 28w
+ 6  aniso      4    <I₄D2-1>                   16w, 28w
+ 7  iso        4    <E_θ>                      3w, 8w, 16w, 28w
+ 8  iso        3    I₁-3                       3w, 10w, 28w
+ 9  iso        3    <I₂-3>ln(1+<I₂-3>)         3w, 10w, 28w
+10  cross      3    <I₂-3>·<E_z>               10w, 16w, 28w
+11  aniso      2    (<I₄θ-1>)³                 3w, 16w
+12  aniso      2    <I₄θ-1>                    8w, 28w
+13  aniso      2    exp(<I₄z-1>)-1             3w, 10w
+14  aniso      2    (<I₄D2-1>)³                3w, 16w
+15  cross      2    <I₄z-1>·<E_z>              3w, 28w
+16  aniso      1    (<I₄D1-1>)³                3w
+17  cross      1    <I₄z-1>·<I₄D2-1>           3w
+18  cross      1    <I₁-3>·<E_z>               8w
+19  aniso      1    (<I₄z-1>)³                 3w
+20  cross      1    <I₁-3>·<E_θ>               3w
+
+
+Grouped by bucket
+-----------------
+
+ISOTROPIC (5)
+  I₁-3
+  I₂-3
+  <E_θ>
+  <E_z>
+  <I₂-3>ln(1+<I₂-3>)
+
+ANISOTROPIC (9)
+  <I₄θ-1>
+  <I₄z-1>
+  <I₄D1-1>
+  <I₄D2-1>
+  (<I₄θ-1>)³
+  (<I₄z-1>)³
+  (<I₄D1-1>)³
+  (<I₄D2-1>)³
+  exp(<I₄z-1>)-1
+
+CROSS (6)
+  I₈D1D2
+  <I₂-3>·<E_z>
+  <I₄z-1>·<E_z>
+  <I₄z-1>·<I₄D2-1>
+  <I₁-3>·<E_z>
+  <I₁-3>·<E_θ>
+
+(Counts: 5 iso + 9 aniso + 6 cross = 20 unique terms.)

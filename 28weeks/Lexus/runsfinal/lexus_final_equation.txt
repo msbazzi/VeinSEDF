@@ -1,0 +1,38 @@
+FINAL EQUATION FOR lexus - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [2, 3, 5, 7, 8, 30, 42]
+
+Effective Tweak Weights:
+  [iso  ] <E_θ>                (idx  2): gate=  5.4049e-01, eff_w_norm=  6.2773e-01, coeff_raw=  1.1852e+00, sigma=  5.2966e-01
+  [iso  ] <E_z>                (idx  3): gate=  1.9790e-03, eff_w_norm=  1.2579e-03, coeff_raw=  1.5204e-02, sigma=  8.2734e-02
+  [aniso] <I₄θ-1>              (idx  5): gate=  2.8787e-01, eff_w_norm=  2.8886e-01, coeff_raw=  2.7265e-01, sigma=  1.0595e+00
+  [aniso] <I₄D1-1>             (idx  7): gate=  3.7693e-02, eff_w_norm=  3.0320e-02, coeff_raw=  1.2874e-01, sigma=  2.3552e-01
+  [aniso] <I₄D2-1>             (idx  8): gate=  3.2343e-02, eff_w_norm=  2.5462e-02, coeff_raw=  1.0811e-01, sigma=  2.3552e-01
+  [cross] <I₄z-1>·<E_z>        (idx 30): gate=  1.8446e-03, eff_w_norm=  1.1831e-03, coeff_raw=  9.3102e-03, sigma=  1.2708e-01
+  [cross] I₈D1D2               (idx 42): gate=  1.2937e-03, eff_w_norm=  1.0520e-03, coeff_raw=  4.6148e-03, sigma=  2.2797e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {<E_θ>, <E_z>}
+  ΔW_aniso uses ψ_i ∈ {<I₄θ-1>, <I₄D1-1>, <I₄D2-1>}
+  W_cross  uses ψ_i ∈ {<I₄z-1>·<E_z>, I₈D1D2}
+  Combined symbolic terms: {<E_θ>, <E_z>, <I₄θ-1>, <I₄D1-1>, <I₄D2-1>, <I₄z-1>·<E_z>, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

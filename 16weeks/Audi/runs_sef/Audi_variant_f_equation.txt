@@ -1,0 +1,23 @@
+Combined Equation Fitted Weights — Variant F — Age Audi
+============================================================
+
+W_total = W_base + W_cross_fixed
+
+  W_base = b_θ·Eθ² + b_z·Ez² + b_θz·<Eθ><Ez>  (quadratic iso)
+         + Σ_m (k1_m/4k2_m)·expm1(k2_m·ξ_m²)   (4-fiber, rec, disp)
+
+  W_cross_fixed = Σ_i w_i · ψ_i  (fixed terms from cross-age discovery)
+
+Fitted weights:
+---------------------------------------------
+  [idx  1] I₂-3                     : w =   0.067179
+  [idx  2] <E_θ>                    : w =   0.061473
+  [idx  3] <E_z>                    : w =   0.098085
+  [idx  6] <I₄z-1>                  : w =   0.098051
+  [idx  7] <I₄D1-1>                 : w =   0.064819
+  [idx  8] <I₄D2-1>                 : w =   0.064819
+  [idx 35] <I₂-3>·<E_z>             : w =   0.122013
+  [idx 42] I₈D1D2                   : w =   1.237760
+
+Fixed term set (COMBINED_FIXED_TERMS):
+  ['I₂-3', '<E_θ>', '<E_z>', '<I₄z-1>', '<I₄D1-1>', '<I₄D2-1>', '<I₂-3>·<E_z>', 'I₈D1D2']

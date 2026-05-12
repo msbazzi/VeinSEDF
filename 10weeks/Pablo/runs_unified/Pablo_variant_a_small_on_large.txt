@@ -1,0 +1,56 @@
+Small-on-large linearised stiffness — variant_a — Age Pablo
+Reference: Baek, Gleason, Rajagopal, Humphrey (2007)
+========================================================================
+
+In-vivo configuration (assumed equilibrium):
+  λ_θ_iv     : 1.158802
+  λ_z_iv     : 1.252108
+  F = diag   : [0.689206 1.158802 1.252108]
+  σ_θ_total  : 1.217981e+00 kPa
+  σ_z_total  : 6.079314e+00 kPa
+  Lagrange p : 6.133483e-04 kPa
+
+Extra Cauchy stress t_extra_AA (no Lagrange p) [kPa]:
+  t_extra_rr : 6.133483e-04
+  t_extra_θθ : 1.218595e+00
+  t_extra_zz : 6.079928e+00
+
+Lagrangian material stiffness K_AABB (kPa)  ordering (r, θ, z):
+  K_rrrr   : -4.336809e-19
+  K_rrθθ   : +0.000000e+00
+  K_rrzz   : +0.000000e+00
+  K_θθrr   : +0.000000e+00
+  K_θθθθ   : +5.398456e+00
+  K_θθzz   : +9.702885e-01
+  K_zzrr   : +0.000000e+00
+  K_zzθθ   : +9.702885e-01
+  K_zzzz   : +4.126060e+01
+
+Spatial elasticity tensor C diagonal block (kPa)  ordering (r, θ, z):
+  C_rrrrrrrr: +1.226697e-03
+  C_rrθθrrθθ: +0.000000e+00
+  C_rrzzrrzz: +0.000000e+00
+  C_θθrrθθrr: +0.000000e+00
+  C_θθθθθθθθ: +1.217154e+01
+  C_θθzzθθzz: +2.042692e+00
+  C_zzrrzzrr: +0.000000e+00
+  C_zzθθzzθθ: +2.042692e+00
+  C_zzzzzzzz: +1.135748e+02
+
+Shear stiffness pre-stress contribution only (kPa):
+  C_θzθz   : +6.079928e+00
+  C_rθrθ   : +1.218595e+00
+  C_rzrz   : +6.079928e+00
+
+Computational K_FSG (5×5, MPa)  rows/cols = [θ, z, θz, rθ, rz]:
+[[0.0122 0.002  0.     0.     0.    ]
+ [0.002  0.1136 0.     0.     0.    ]
+ [0.     0.     0.0061 0.     0.    ]
+ [0.     0.     0.     0.0012 0.    ]
+ [0.     0.     0.     0.     0.0061]]
+
+C_out summary (MPa) [Cθθθθ, Czzzz, Cθθzz, Cθzθz_pre]:
+  [0.012172, 0.113575, 0.002043, 0.006080]
+
+Notes:
+  Diagonal block (Cθθθθ, Czzzz, Cθθzz, Czzθθ) is computed from the λ-Hessian of W via principal-axis chain rule; values are exact for the model. C_θzθz / C_rθrθ / C_rzrz include the Baek pre-stress term only — material K_θzθz etc. needs off-diagonal C perturbation, which the energy(lam) API does not currently expose.

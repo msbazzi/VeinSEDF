@@ -1,0 +1,22 @@
+Combined Equation Fitted Weights — Variant F — Age lexus
+Term set: v2  (6 terms)
+============================================================
+
+W_total = W_base + W_cross_fixed
+
+  W_base = b_θ·Eθ² + b_z·Ez² + b_θz·<Eθ><Ez>  (quadratic iso)
+         + Σ_m (k1_m/4k2_m)·expm1(k2_m·ξ_m²)   (4-fiber, rec, disp)
+
+  W_cross_fixed = Σ_i w_i · ψ_i  (fixed terms from cross-age discovery)
+
+Fitted weights:
+---------------------------------------------
+  [idx  0] I₁-3                     : w =   0.710660
+  [idx  1] I₂-3                     : w =   0.058467
+  [idx  4] <I₂-3>ln(1+<I₂-3>)       : w =   0.003001
+  [idx 13] (<I₄θ-1>)³               : w =   0.001946
+  [idx 35] <I₂-3>·<E_z>             : w =   0.002257
+  [idx 42] I₈D1D2                   : w =   0.108250
+
+Fixed term set (v2):
+  ['I₁-3', 'I₂-3', '<I₂-3>ln(1+<I₂-3>)', '(<I₄θ-1>)³', '<I₂-3>·<E_z>', 'I₈D1D2']

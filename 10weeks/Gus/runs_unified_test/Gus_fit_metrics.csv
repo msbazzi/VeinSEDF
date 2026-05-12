@@ -1,0 +1,2 @@
+model,r2_circumferential,r2_axial,mse_circumferential,mse_axial,loss,aic,bic
+g: Combined Eq (Quad+4Fib+no rec+no disp+cross),0.6381330091443358,0.907948355530448,7.977256128828504,1.0447166685208489,0.5161923303759202,6298.254444882101,6672.443906303833

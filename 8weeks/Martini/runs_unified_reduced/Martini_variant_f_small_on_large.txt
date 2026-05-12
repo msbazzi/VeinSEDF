@@ -1,0 +1,56 @@
+Small-on-large linearised stiffness — variant_f — Age Martini
+Reference: Baek, Gleason, Rajagopal, Humphrey (2007)
+========================================================================
+
+In-vivo configuration (assumed equilibrium):
+  λ_θ_iv     : 1.091176
+  λ_z_iv     : 1.422986
+  F = diag   : [0.644027 1.091176 1.422986]
+  σ_θ_total  : 2.509714e+00 kPa
+  σ_z_total  : -9.954141e-01 kPa
+  Lagrange p : 5.118980e-03 kPa
+
+Extra Cauchy stress t_extra_AA (no Lagrange p) [kPa]:
+  t_extra_rr : 5.118980e-03
+  t_extra_θθ : 2.514833e+00
+  t_extra_zz : -9.902952e-01
+
+Lagrangian material stiffness K_AABB (kPa)  ordering (r, θ, z):
+  K_rrrr   : +4.801715e-02
+  K_rrθθ   : +4.430462e-02
+  K_rrzz   : +2.414894e-02
+  K_θθrr   : +4.430462e-02
+  K_θθθθ   : +1.769615e+00
+  K_θθzz   : -9.438643e+00
+  K_zzrr   : +2.414894e-02
+  K_zzθθ   : -9.438643e+00
+  K_zzzz   : +3.333328e+01
+
+Spatial elasticity tensor C diagonal block (kPa)  ordering (r, θ, z):
+  C_rrrrrrrr: +1.849859e-02
+  C_rrθθrrθθ: +2.188001e-02
+  C_rrzzrrzz: +2.028187e-02
+  C_θθrrθθrr: +2.188001e-02
+  C_θθθθθθθθ: +7.538425e+00
+  C_θθzzθθzz: -2.275627e+01
+  C_zzrrzzrr: +2.028187e-02
+  C_zzθθzzθθ: -2.275627e+01
+  C_zzzzzzzz: +1.346919e+02
+
+Shear stiffness pre-stress contribution only (kPa):
+  C_θzθz   : -9.902952e-01
+  C_rθrθ   : +2.514833e+00
+  C_rzrz   : -9.902952e-01
+
+Computational K_FSG (5×5, MPa)  rows/cols = [θ, z, θz, rθ, rz]:
+[[ 0.0075 -0.0228  0.      0.      0.    ]
+ [-0.0228  0.1347  0.      0.      0.    ]
+ [ 0.      0.     -0.001   0.      0.    ]
+ [ 0.      0.      0.      0.0025  0.    ]
+ [ 0.      0.      0.      0.     -0.001 ]]
+
+C_out summary (MPa) [Cθθθθ, Czzzz, Cθθzz, Cθzθz_pre]:
+  [0.007538, 0.134692, -0.022756, -0.000990]
+
+Notes:
+  Diagonal block (Cθθθθ, Czzzz, Cθθzz, Czzθθ) is computed from the λ-Hessian of W via principal-axis chain rule; values are exact for the model. C_θzθz / C_rθrθ / C_rzrz include the Baek pre-stress term only — material K_θzθz etc. needs off-diagonal C perturbation, which the energy(lam) API does not currently expose.

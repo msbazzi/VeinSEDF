@@ -1,0 +1,36 @@
+FINAL EQUATION FOR Orion - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [3, 7, 8, 16, 42]
+
+Effective Tweak Weights:
+  [iso  ] <E_z>                (idx  3): gate=  2.2400e-03, eff_w_norm=  1.6862e-03, coeff_raw=  1.4179e-02, sigma=  1.1892e-01
+  [aniso] <I₄D1-1>             (idx  7): gate=  2.5215e-01, eff_w_norm=  2.8470e-01, coeff_raw=  1.1688e+00, sigma=  2.4358e-01
+  [aniso] <I₄D2-1>             (idx  8): gate=  2.3398e-01, eff_w_norm=  2.6069e-01, coeff_raw=  1.0702e+00, sigma=  2.4358e-01
+  [aniso] (<I₄D2-1>)³          (idx 16): gate=  7.7118e-03, eff_w_norm=  5.6790e-03, coeff_raw=  1.7228e-02, sigma=  3.2964e-01
+  [cross] I₈D1D2               (idx 42): gate=  1.0503e-01, eff_w_norm=  1.0032e-01, coeff_raw=  6.4829e-01, sigma=  1.5475e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {<E_z>}
+  ΔW_aniso uses ψ_i ∈ {<I₄D1-1>, <I₄D2-1>, (<I₄D2-1>)³}
+  W_cross  uses ψ_i ∈ {I₈D1D2}
+  Combined symbolic terms: {<E_z>, <I₄D1-1>, <I₄D2-1>, (<I₄D2-1>)³, I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

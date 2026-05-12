@@ -1,0 +1,26 @@
+Combined Equation Fitted Weights — Variant F — Age Martini
+Term set: v2  (10 terms)
+============================================================
+
+W_total = W_base + W_cross_fixed
+
+  W_base = b_θ·Eθ² + b_z·Ez² + b_θz·<Eθ><Ez>  (quadratic iso)
+         + Σ_m (k1_m/4k2_m)·expm1(k2_m·ξ_m²)   (4-fiber, rec, disp)
+
+  W_cross_fixed = Σ_i w_i · ψ_i  (fixed terms from cross-age discovery)
+
+Fitted weights:
+---------------------------------------------
+  [idx  0] I₁-3                     : w =   0.004047
+  [idx  1] I₂-3                     : w =   0.009980
+  [idx  4] <I₂-3>ln(1+<I₂-3>)       : w =   0.185421
+  [idx  5] <I₄θ-1>                  : w =   0.007541
+  [idx  6] <I₄z-1>                  : w =   0.235257
+  [idx  7] <I₄D1-1>                 : w =   0.010037
+  [idx  8] <I₄D2-1>                 : w =   0.010037
+  [idx 13] (<I₄θ-1>)³               : w =   0.004323
+  [idx 35] <I₂-3>·<E_z>             : w =   0.002891
+  [idx 42] I₈D1D2                   : w =   0.075351
+
+Fixed term set (v2):
+  ['I₁-3', 'I₂-3', '<I₂-3>ln(1+<I₂-3>)', '<I₄θ-1>', '<I₄z-1>', '<I₄D1-1>', '<I₄D2-1>', '(<I₄θ-1>)³', '<I₂-3>·<E_z>', 'I₈D1D2']

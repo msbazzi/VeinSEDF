@@ -1,0 +1,56 @@
+Small-on-large linearised stiffness — variant_f — Age Original
+Reference: Baek, Gleason, Rajagopal, Humphrey (2007)
+========================================================================
+
+In-vivo configuration (assumed equilibrium):
+  λ_θ_iv     : 0.575101
+  λ_z_iv     : 1.397628
+  F = diag   : [1.244125 0.575101 1.397628]
+  σ_θ_total  : 2.942523e-01 kPa
+  σ_z_total  : 7.296214e+00 kPa
+  Lagrange p : 3.996451e-02 kPa
+
+Extra Cauchy stress t_extra_AA (no Lagrange p) [kPa]:
+  t_extra_rr : 3.996451e-02
+  t_extra_θθ : 3.342168e-01
+  t_extra_zz : 7.336179e+00
+
+Lagrangian material stiffness K_AABB (kPa)  ordering (r, θ, z):
+  K_rrrr   : +4.047868e-03
+  K_rrθθ   : +2.746449e-02
+  K_rrzz   : +6.720593e-02
+  K_θθrr   : +2.746449e-02
+  K_θθθθ   : +9.993347e-03
+  K_θθzz   : +9.163297e-02
+  K_zzrr   : +6.720593e-02
+  K_zzθθ   : +9.163297e-02
+  K_zzzz   : +4.335182e+00
+
+Spatial elasticity tensor C diagonal block (kPa)  ordering (r, θ, z):
+  C_rrrrrrrr: +8.962704e-02
+  C_rrθθrrθθ: +1.406010e-02
+  C_rrzzrrzz: +2.031978e-01
+  C_θθrrθθrr: +1.406010e-02
+  C_θθθθθθθθ: +6.695267e-01
+  C_θθzzθθzz: +5.920023e-02
+  C_zzrrzzrr: +2.031978e-01
+  C_zzθθzzθθ: +5.920023e-02
+  C_zzzzzzzz: +3.121379e+01
+
+Shear stiffness pre-stress contribution only (kPa):
+  C_θzθz   : +7.336179e+00
+  C_rθrθ   : +3.342168e-01
+  C_rzrz   : +7.336179e+00
+
+Computational K_FSG (5×5, MPa)  rows/cols = [θ, z, θz, rθ, rz]:
+[[0.0007 0.0001 0.     0.     0.    ]
+ [0.0001 0.0312 0.     0.     0.    ]
+ [0.     0.     0.0073 0.     0.    ]
+ [0.     0.     0.     0.0003 0.    ]
+ [0.     0.     0.     0.     0.0073]]
+
+C_out summary (MPa) [Cθθθθ, Czzzz, Cθθzz, Cθzθz_pre]:
+  [0.000670, 0.031214, 0.000059, 0.007336]
+
+Notes:
+  Diagonal block (Cθθθθ, Czzzz, Cθθzz, Czzθθ) is computed from the λ-Hessian of W via principal-axis chain rule; values are exact for the model. C_θzθz / C_rθrθ / C_rzrz include the Baek pre-stress term only — material K_θzθz etc. needs off-diagonal C perturbation, which the energy(lam) API does not currently expose.

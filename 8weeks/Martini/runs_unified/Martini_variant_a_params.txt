@@ -1,0 +1,29 @@
+Base parameters — Variant A — Age Martini
+  a: NeoHookean+4Fib (no rec, no disp)
+========================================================================
+
+Model: DecomposedSEDFBase  (no symbolic cross terms)
+  isotropic   : neohookean
+  anisotropic : 4fiber  (recruit=False, disp=False)
+
+State dict (gradient-trained):
+------------------------------------------------------------------------
+  iso._mu: -4.440280192
+  aniso._α: 1.238584246
+  aniso._k1: [-1.10162894, -1.10162894,  9.76931199,  5.89748721]
+  aniso._k2: [ 1.36552525,  1.36552525, -0.41680761, -7.73783603]
+  aniso._lam0_raw: [ -7.15775849,  -7.15775849, -10.20012386,  -8.48554115]
+  aniso._lam0h_raw: [-2.8, -2.8]
+  aniso._tau_raw: [ 5.82275912,  5.82275912, -5.12912475, -1.21659956]
+  aniso._sigma_s_raw: [-2., -2., -2., -2.]
+  aniso._lambda_lb_raw: [-4., -4., -4., -4.]
+  aniso._lambda_ub_raw: [1., 1., 1., 1.]
+  aniso._logn_mu_raw: [-2.2, -2.2, -2.2, -2.2]
+  aniso._logn_sig_raw: [-2., -2., -2., -2.]
+  aniso._beta_a_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._beta_b_raw: [0.2, 0.2, 0.2, 0.2]
+  aniso._recruit_ref_stretch: 1.422986486
+  aniso.quad_x: [0.005299, 0.027712, 0.067184, 0.122299, 0.191061, 0.270991, 0.359009,
+ 0.451846, 0.546156, 0.638756, 0.726781, 0.807785]
+  aniso.quad_w: [0.013576, 0.031126, 0.047579, 0.062314, 0.074797, 0.084578, 0.091322,
+ 0.094827, 0.095038, 0.092045, 0.086079, 0.0775  ]

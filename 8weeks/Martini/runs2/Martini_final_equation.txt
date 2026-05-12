@@ -1,0 +1,34 @@
+FINAL EQUATION FOR Martini - POLY BASE
+============================================================
+
+Base Decomposition:
+  isotropic model   = poly
+  anisotropic model = 4fiber
+
+Selected Basis Terms (from gated discovery):
+  Active indices: [1, 4, 42]
+
+Effective Tweak Weights:
+  [iso  ] I₂-3                 (idx  1): gate=  8.4588e-01, eff_w_norm=  1.0307e+00, coeff_raw=  3.2736e-02, sigma=  3.1487e+01
+  [iso  ] <I₂-3>ln(1+<I₂-3>)   (idx  4): gate=  1.0000e+00, eff_w_norm=  1.0529e+01, coeff_raw=  7.2540e-02, sigma=  1.4515e+02
+  [cross] I₈D1D2               (idx 42): gate=  4.9789e-01, eff_w_norm=  7.2153e-01, coeff_raw=  1.3606e+00, sigma=  5.3029e-01
+
+  W_cross = Σ((g_i·w_i) · ψ_i) over the selected basis terms above
+
+
+FINAL EQUATION:
+==============================
+W_total = W_base + W_cross
+
+where:
+  W_base = W_iso + W_aniso
+  isotropic model   = poly
+  anisotropic model = 4fiber
+  W_aniso = recruiting fiber-directional energy
+  ΔW_iso   uses ψ_i ∈ {I₂-3, <I₂-3>ln(1+<I₂-3>)}
+  ΔW_aniso uses ψ_i ∈ {∅}
+  W_cross  uses ψ_i ∈ {I₈D1D2}
+  Combined symbolic terms: {I₂-3, <I₂-3>ln(1+<I₂-3>), I₈D1D2}
+
+Features: [I₁, I₄ₕ, I₄ₜ, I₄ᵧ, I₄₋ₕ]
+where I₄₋ₕ = I₄(helical_2)

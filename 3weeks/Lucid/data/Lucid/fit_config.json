@@ -1,0 +1,99 @@
+{
+  "animal": "Lucid",
+  "hyperparameters": {
+    "epochs_base": 4000,
+    "epochs_warmup": 4000,
+    "lr_base": 0.05,
+    "lr_resid": 0.01,
+    "wtheta_boost": 3.5,
+    "robust_delta": 0.5,
+    "recruit_start_init": 1.35,
+    "recruit_start_min": 0.8,
+    "recruit_start_max": 1.55,
+    "recruit_end_min": 1.15,
+    "recruit_end_max": 1.8,
+    "gate_thr": 0.001,
+    "seed": 125,
+    "recruit_start_mode": "learn"
+  },
+  "initial_params": {
+    "base.iso._bth": -3.8623056663919777,
+    "base.iso._bz": 2.8275499252001803,
+    "base.iso.bthz": -2.1024895400078636,
+    "base.aniso._\u03b1": -1.1141383669385263,
+    "base.aniso._k1": [
+      6.49258762,
+      6.49258762,
+      -4.09730768,
+      -1.21202229
+    ],
+    "base.aniso._k2": [
+      6.48058149,
+      6.48058149,
+      6.55080654,
+      7.42870262
+    ],
+    "base.aniso._lam0_raw": [
+      -2.0,
+      -2.0,
+      -2.0,
+      -2.0
+    ],
+    "base.aniso._lam0h_raw": [
+      -2.8,
+      -2.8
+    ],
+    "base.aniso._kappa": [
+      -0.43278137,
+      -0.43278137
+    ],
+    "base.aniso._tau_raw": [
+      5.7026776,
+      5.7026776,
+      -1.0143612,
+      -0.0186146
+    ],
+    "base.aniso._sigma_s_raw": [
+      -2.0,
+      -2.0,
+      -2.0,
+      -2.0
+    ],
+    "base.aniso._lambda_lb_raw": [
+      -2.69167429,
+      -2.69167429,
+      -2.28876087,
+      -1.43176897
+    ],
+    "base.aniso._lambda_ub_raw": [
+      -3.00229863,
+      -3.00229863,
+      0.89621555,
+      -2.9581611
+    ],
+    "base.aniso._logn_mu_raw": [
+      -1.61052967,
+      -1.61052967,
+      -2.37145801,
+      -0.10034266
+    ],
+    "base.aniso._logn_sig_raw": [
+      -5.0398,
+      -5.0398,
+      -2.69771225,
+      -2.70319562
+    ],
+    "base.aniso._beta_a_raw": [
+      -0.87183897,
+      -0.87183897,
+      -0.87183897,
+      -0.81093022
+    ],
+    "base.aniso._beta_b_raw": [
+      -0.5798185,
+      -0.47000363,
+      -0.05129329,
+      -1.2039728
+    ]
+  }
+}
