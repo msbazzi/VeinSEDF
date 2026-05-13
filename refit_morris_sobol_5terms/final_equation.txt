@@ -1,0 +1,46 @@
+Fitted Flat-Symbolic SEDF — Final Equation per Animal
+==============================================================================
+Form:  W(λ) = Σ_i w_i · ψ_i(λ)
+        - ψ_i with I₄_m / I₈ entries are evaluated on a recruitment-
+          weighted expected fiber activation ξ_m (lognormal recruitment
+          integrated over slack λ_s ∈ (λ_lb, λ_ub], one bracket per family).
+        - Helical families d1, d2 carry GOH dispersion κ ∈ [0, 1/3]
+          (κ=0: perfectly aligned; κ=1/3: fully isotropic).
+        - The per-curve recruitment shift is
+              λ_lb_eff(λ_z) = λ_lb · (λ_z / λ_z_iv)
+          where λ_z_iv is the in-vivo axial stretch inferred from FL
+          curve intersections (Weizsäcker / Ferruzzi method).
+
+--- 10weeks / Gus   (term set: proposed) ---
+
+Fitted weights (|w| descending):
+   +19400361.967103   ·   I₈D1D2
+   +1257421.620659   ·   <I₄D1-1>
+     +198.216238   ·   <I₄D2-1>
+       +0.733343   ·   <E_θ>
+       -0.044837   ·   b_θz <E_θ><E_z>
+
+Closed form:
+   W(λ) = 19400361.9671·I₈D1D2 − 0.0448·b_θz <E_θ><E_z> + 0.7333·<E_θ> + 1257421.6207·<I₄D1-1> + 198.2162·<I₄D2-1>
+
+Fit quality:
+   RMSE_θ = 2.0916 kPa
+   RMSE_z = 1.1567 kPa
+   R²_θ   = 0.8515
+   R²_z   = 0.9586
+
+Recruitment:
+   λ_z_iv (in-vivo axial reference) = 1.4653
+   λ_lb shared init = 1.6500   (learned)
+   Per-family fitted recruitment range:
+      d1    :  λ_lb = 1.5670,   λ_ub = 2.6354   (span Δ = 1.0683)
+      d2    :  λ_lb = 2.0225,   λ_ub = 2.6461   (span Δ = 0.6237)
+      theta :  λ_lb = 1.2000,   λ_ub = 1.9750   (span Δ = 0.7750)
+      z     :  λ_lb = 1.2000,   λ_ub = 1.9750   (span Δ = 0.7750)
+   Per-curve effective start: λ_lb_eff(λ_z) = λ_lb · (λ_z / 1.4653)
+
+Dispersion (helical fibers; κ ∈ [0, 1/3]):
+   κ shared init = 0.0800   (learned)
+      d1:  κ = 0.3332
+      d2:  κ = 0.0000
+

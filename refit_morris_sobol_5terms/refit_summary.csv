@@ -1,0 +1,2 @@
+subset,n_animals,mean_rmse_theta,median_rmse_theta,mean_rmse_z,median_rmse_z,mean_rmse_combined,median_rmse_combined,mean_r2_theta,median_r2_theta,mean_r2_z,median_r2_z
+proposed,1,2.0916327931278,2.0916327931278,1.1567470489809184,1.1567470489809184,1.6901170782838781,1.6901170782838781,0.8514806542414095,0.8514806542414095,0.958589284537401,0.958589284537401

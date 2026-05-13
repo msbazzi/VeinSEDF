@@ -459,8 +459,8 @@ def main():
     ap.add_argument("--min_specimens", type=int, default=1,
                     help="Drop terms selected in fewer than this many specimens.")
     ap.add_argument("--n_grid", type=int, default=20)
-    ap.add_argument("--lam_theta_min", type=float, default=0.60)
-    ap.add_argument("--lam_theta_max", type=float, default=1.60)
+    ap.add_argument("--lam_theta_min", type=float, default=0.30)
+    ap.add_argument("--lam_theta_max", type=float, default=2.10)
     ap.add_argument("--lam_z_min", type=float, default=1.00)
     ap.add_argument("--lam_z_max", type=float, default=1.60)
     ap.add_argument("--morris_bound_mode", default="coeff_max", choices=BOUND_MODES)

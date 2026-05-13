@@ -1,0 +1,8 @@
+Flat-symbolic SEDF refit on LOO/coeff_max reduced term set
+(recruited I4/I8 basis, no base+tweak split)
+================================================================================
+
+proposed: I₈D1D2, b_θz <E_θ><E_z>, <E_θ>, <I₄D1-1>, <I₄D2-1>, <I₄z-1>, (<I₄θ-1>)³, <E_z>, <I₄θ-1>, b_z E_z²
+
+  subset  n_animals  mean_rmse_theta  median_rmse_theta  mean_rmse_z  median_rmse_z  mean_rmse_combined  median_rmse_combined  mean_r2_theta  median_r2_theta  mean_r2_z  median_r2_z
+proposed          1         1.445138           1.445138     0.594147       0.594147            1.104861              1.104861       0.929102         0.929102   0.989075     0.989075

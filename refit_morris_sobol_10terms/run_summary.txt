@@ -1,0 +1,3 @@
+All outputs in: /Users/marisabazzi/TEVG/VeinSDF/refit_morris_sobol_10terms
+  subset  n_animals  mean_rmse_theta  median_rmse_theta  mean_rmse_z  median_rmse_z  mean_rmse_combined  median_rmse_combined  mean_r2_theta  median_r2_theta  mean_r2_z  median_r2_z
+proposed          1         1.445138           1.445138     0.594147       0.594147            1.104861              1.104861       0.929102         0.929102   0.989075     0.989075

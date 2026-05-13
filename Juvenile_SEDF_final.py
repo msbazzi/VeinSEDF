@@ -25,7 +25,6 @@ from typing import Optional, Tuple, List
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 import torch
 from torch import nn
@@ -1843,6 +1842,8 @@ def _group_and_plot(ax_left, ax_right, Xth, yth, Xz, yz, model, color, ls, lbl_t
         ax_right.tick_params(axis='both', which='major', labelsize=14)
 
 def plot_results(Xth, yth, Xz, yz, base_model, tweaked_model, age, outdir, round_step=0.01, ids_th=None, ids_z=None):
+    import matplotlib.pyplot as plt
+
     os.makedirs(outdir, exist_ok=True)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -2328,6 +2329,8 @@ def _save_combined_equation(model, variant_key, age, outdir, term_set_name="v1")
 def _plot_comparison(age, variant_models, Xth, yth, Xz, yz, outdir,
                      ids_th=None, ids_z=None, round_step=0.01):
     """Save a 6×2 comparison figure (one row per variant, circ + axial)."""
+    import matplotlib.pyplot as plt
+
     os.makedirs(outdir, exist_ok=True)
     n_variants = len(variant_models)
     fig, axes = plt.subplots(n_variants, 2, figsize=(14, 4 * n_variants),

@@ -1,0 +1,24 @@
+name,ST_primary,n_specimens,primary_topK,secondary_topK,n_meets_floor,loo_stable,is_base,in_robust_set
+exp(<I₄z-1>)-1,0.6955575091443481,2,True,True,True,True,False,True
+I₈D1D2,0.3145913680047269,12,True,True,True,True,False,True
+(<I₄θ-1>)³,0.14342999706696605,2,True,True,True,True,False,True
+I₂-3,0.14069297682322812,4,True,True,True,True,False,True
+<I₂-3>ln(1+<I₂-3>),0.11619405813460026,3,True,True,True,True,False,True
+<I₄θ-1>,0.07557444028237721,2,True,True,True,True,False,True
+I₁-3,0.07280603657611741,3,True,True,True,False,False,False
+<I₄D1-1>,0.055761139280595826,4,True,False,True,True,False,False
+<I₄z-1>,0.055451153593288185,5,True,False,True,True,False,False
+<I₄D2-1>,0.055143951403525744,4,True,False,True,True,False,False
+<I₄z-1>·<I₄D2-1>,0.0302431251126438,1,True,True,False,False,False,False
+<I₁-3>·<E_θ>,0.021970648897964976,1,True,True,False,False,False,False
+(<I₄z-1>)³,0.019995748678416914,1,True,True,False,False,False,False
+(<I₄D2-1>)³,0.019973019146946217,2,True,True,True,False,False,False
+<E_θ>,0.01994235129022927,4,True,False,True,True,False,False
+(<I₄D1-1>)³,0.019725753473741704,1,False,True,False,False,False,False
+<I₂-3>·<E_z>,0.017394855466689608,3,False,True,True,True,False,False
+<E_z>,0.013746923675075785,7,False,False,True,True,False,False
+<I₁-3>·<E_z>,0.008345698330178064,1,False,True,False,False,False,False
+<I₄z-1>·<E_z>,0.0077318266334211756,2,False,False,True,False,False,False
+b_th E_θ²,0.007656716519983406,12,False,True,True,True,True,False
+b_z E_z²,0.002042191183366763,12,False,False,True,True,True,False
+b_θz <E_θ><E_z>,0.0016004755631789597,12,False,False,True,True,True,False

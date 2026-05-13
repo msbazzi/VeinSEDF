@@ -1,0 +1,7 @@
+k = 15
+Source LOO     : /Users/marisabazzi/TEVG/VeinSDF/cross_age_sensitivity_with_base/loo_rank_stability_physio.csv
+Basis branch   : theta
+Term filter    : drop only k1₀..k1₃ (not representable as scalar ψ);
+                 iso base shapes (b_th E_θ², b_z E_z², b_θz <E_θ><E_z>) are kept.
+
+proposed (top-15): I₈D1D2, b_θz <E_θ><E_z>, <E_θ>, <I₄D1-1>, <I₄D2-1>, <I₄z-1>, <E_z>, <I₄θ-1>, b_z E_z², I₂-3, <I₂-3>ln(1+<I₂-3>), b_th E_θ², (<I₄θ-1>)³, exp(<I₄z-1>)-1, <I₂-3>·<E_z>
